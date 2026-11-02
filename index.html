@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo Otimizado - Edital TJPB x FGV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Análise de Questões FGV</h1>
+        <p>Filtro baseado no conteúdo programático do documento "TJPB.pdf"</p>
+    </header>
+
+    <main>
+        <section class="filtros">
+            <label for="assuntoSelect">Selecione o Assunto do Edital TJPB:</label>
+            <select id="assuntoSelect">
+                <option value="">Selecione um tópico...</option>
+                <!-- As opções serão carregadas via JavaScript com base no TJPB.pdf -->
+            </select>
+            <button id="btnFiltrar">Buscar e Ordenar por Similaridade</button>
+        </section>
+
+        <section class="adicionar-questao">
+            <h3>Atualizar Banco de Dados</h3>
+            <p>Para manter o sistema atualizado com sites como Mapa da Prova, adicione novas questões aqui (pronto para futura integração com banco de dados em nuvem).</p>
+            <form id="formNovaQuestao">
+                <input type="text" id="novoConteudoEdital" placeholder="Conteúdo Programático cobrado no edital da questão" required>
+                <textarea id="novoEnunciado" placeholder="Enunciado da questão FGV" required></textarea>
+                <button type="submit">Salvar Questão Localmente</button>
+            </form>
+        </section>
+
+        <section id="resultados">
+            <h2>Questões Ordenadas por Relevância</h2>
+            <div id="questoesContainer">
+                <!-- As questões aparecerão aqui -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
